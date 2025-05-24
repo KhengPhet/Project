@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <!-- header -->
     <div class="container">
@@ -17,19 +19,19 @@
                 </div>
             </div>
             <nav class="nav  w-[50%] h-[100%] flex justify-center items-center ">
-                <ul class="flex items-center justify-center gap-10 uppercase">
+                <ul class="flex items-center justify-center gap-10 font-bold uppercase">
                     <li><a href="#" class="transition hover:text-blue-500">Home</a></li>
-                    <li><a href="#" class="transition hover:text-blue-500">Destination</a></li>
-                    <li><a href="#" class="transition hover:text-blue-500">Activities</a></li>
-                    <li><a href="#" class="transition hover:text-blue-500">Trip Plan</a></li>
+                    <li><a href="./Destination.html" class="transition hover:text-blue-500 ">Destination</a></li>
+                    <li><a href="#" class="transition hover:text-blue-500 ">Activities</a></li>
+                    <li><a href="#" class="transition hover:text-blue-500 ">Trip Plan</a></li>
                 </ul>
             </nav>
         </div>
     </div>
 
     <!-- Slide  3 or 4 slide-->
-    <div class="container w-[90%] h-[600px] m-auto mt-10 bg-orange-500 rounded-[10px]">
-        <img src="https://fakeimg.pl/1200x600" alt="" class="w-[100%] h-[100%] rounded-[10px]">
+    <div class="container w-[90%] h-[600px] m-auto mt-10 bg-orange-500 rounded-[10px] relative overflow-hidden">
+        <img id="slide" src="" alt="Slide" class="w-full h-full object-cover rounded-[10px] opacity-0 transition-opacity duration-700">
     </div>
 
     <!-- Our Destination Type -->
@@ -111,7 +113,7 @@
             <div class="w-[305px] h-[460px] bg-white rounded-[10px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
                 <div class="w-[100%] h-[300px] rounded-t-[10px] flex justify-center items-center">
                     <div class="w-full h-full rounded-[10px] p-3">
-                        <img src={img} alt="" class="w-full h-full rounded-[10px]">
+                        <img src="https://fakeimg.pl/285x248" alt="" class="w-full h-full rounded-[10px]">
                     </div>
                 </div>
                 <div class="w-[100%] h-[160px] rounded-b-[10px]">
@@ -197,7 +199,7 @@
 
     <!-- Eat -->
     <div class="w-[90%] h-[548px] m-auto mt-14">
-        <h1 class="w-full text-black h-[10%] text-3xl font-bold">Destinations</h1>
+        <h1 class="w-full text-black h-[10%] text-3xl font-bold">Eat</h1>
         <div class="w-full h-[90%] flex justify-center items-center gap-10">
 
             <!-- box 1 -->
@@ -290,7 +292,7 @@
 
     <!-- Stay -->
     <div class="w-[90%] h-[548px] m-auto mt-14">
-        <h1 class="w-full text-black h-[10%] text-3xl font-bold">Destinations</h1>
+        <h1 class="w-full text-black h-[10%] text-3xl font-bold">Stay</h1>
         <div class="w-full h-[90%] flex justify-center items-center gap-10">
 
             <!-- box 1 -->
@@ -415,21 +417,52 @@
             </div>
         </div>
     </div>
-    
+
     <!-- footer -->
-    <div class="w-full h-[537px]">
-        <div class="w-[90%] h-full m-auto bg-pink-500 flex">
-            <div class="w-[33.3%] h-full bg-orange-500">
+    <div class="w-full h-[537px] bg-[#090021] mt-12">
+        <div class="w-[90%] h-full m-auto flex ">
+            <div class="w-[33.3%] h-full p-5">
                 <!-- logo footer -->
-                <div class="w-full h-[10%] bg-pink-600 mt-5">
-                    <img src="" alt="">
+                <div class="w-full h-[10%] mt-5">
+                    <img src="" alt="image">
                 </div>
-                <div></div>
+                <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, eos vitae cumque sequi necessitatibus deleniti
+                     nisi ducimus veniam non, ut odio. Ex quod, fugit debitis rerum animi consectetur exercitationem mollitia,
+                      praesentium voluptatem illum id optio! Officia quidem cum eligendi doloribus impedit nobis voluptas optio,
+                      nihil similique ducimus, nemo, quibusdam eius.</p>
             </div>
-            <div class="w-[33.3%] h-full bg-blue-500"></div>
-            <div class="w-[33.3%] h-full bg-green-700"></div>
+            <div class="w-[33.3%] h-full p-5">
+                <div class="w-full h-[10%] mt-5 flex justify-start items-center"> 
+                    <h3 class="font-bold text-white">Contact Us</h3>
+                </div>
+                <div class="w-full h-[30px] flex">
+                    <i class="text-xl text-white tmt-2 fa-regular fa-envelope"></i>
+                    <p class="mt-1 text-white ms-4">info@yourcompany.com</p>
+                </div>
+                <div class="w-full h-[30px] flex">
+                    <i class="mt-2 text-xl text-white fa-solid fa-phone"></i>
+                    <p class="mt-1 text-white ms-4">+(855) 456-7890</p>
+                </div>
+                <div class="w-full h-[250px] flex rounded-[10px] mt-5">
+                    <iframe class="object-cover w-full h-full rounded-[10px]" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1991562.9708896878!2d104.63834878032793!3d12.858034547092315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2skh!4v1747901816677!5m2!1sen!2skh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="w-[33.3%] h-full p-5 ms-5">
+                  <div class="w-full h-[10%] mt-5 flex justify-start items-center"> 
+                    <h3 class="font-bold text-white">Contact Us</h3>
+                </div>
+                 <div class="w-full h-[300px] ">
+                    <ul class="text-white">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Destination</a></li>
+                        <li><a href="">Activities</a></li>
+                        <li><a href="">Trip plan</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>
