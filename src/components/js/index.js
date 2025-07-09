@@ -69,3 +69,53 @@
     prevEl: ".swiper-button-prev",
   },
 });
+
+
+// apiService.js (or include in your existing index.js)
+class ApiService {
+  constructor() {
+    // In a real app, this would be your API base URL
+    this.baseUrl = 'https://your-api-endpoint.com';
+  }
+
+  // Mock function to simulate API call - replace with real fetch() in production
+  async getTripData() {
+    // In a real app, you would use:
+    // const response = await fetch(`${this.baseUrl}/trip-data`);
+    // return await response.json();
+    
+    // For now, we'll use your infor_trip object directly
+    return {
+      Homepage: [
+        // Your homepage data...
+      ],
+      Activities: [
+        // Your activities data...
+      ],
+      Destination: [
+        // Your destination data...
+      ],
+      TripPlan: [
+        // Your trip plan data...
+      ]
+    };
+  }
+
+  // Example of a real fetch function you might use:
+  async fetchDestinations() {
+    try {
+      const response = await fetch(`${this.baseUrl}/destinations`);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return await response.json();
+    } catch (error) {
+      console.error('Error fetching destinations:', error);
+      return [];
+    }
+  }
+}
+
+const apiService = new ApiService();
+
+
