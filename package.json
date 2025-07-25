@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "server": "json-server --watch data/api.json --port 3000",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"tailwindcss -i ./src/input.css -o ./components/output.css --watch"
+    "dev": "tailwindcss -i ./src/input.css -o ./components/output.css --watch"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
   }
 }

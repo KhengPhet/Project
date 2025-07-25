@@ -4,13 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TripPlan</title>
     <link rel="stylesheet" href="../output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Fasthand&family=Hanuman:wght@100..900&family=Libre+Barcode+39&family=Moul&display=swap" rel="stylesheet">
+
+<style> 
+    body{
+       font-family: "Hanuman", serif;
+       font-weight:500;
+        font-style: normal; 
+    }
+</style>
 </head>
 
 <body>
@@ -24,7 +36,7 @@
             </div>
             <nav class="nav  w-[50%] h-[100%] flex justify-center items-center ">
                 <ul class="flex items-center justify-center gap-10 font-bold uppercase">
-                    <li><a href="./Honepage.html" class="transition hover:text-blue-500">Home</a></li>
+                    <li><a href="./Homepage.html" class="transition hover:text-blue-500">Home</a></li>
                     <li><a href="./Destination.html" class="transition hover:text-blue-500 ">Destination</a></li>
                     <li><a href="./Activities.html" class="transition hover:text-blue-500 ">Activities</a></li>
                     <li><a href="./TripPlan.html" class="transition hover:text-blue-500 ">Trip Plan</a></li>
@@ -41,32 +53,9 @@
 
     <!-- description plan -->
     <div class="w-[90%] h-[520px]  m-auto mt-14 flex">
-        <div class="w-[50%] h-full ">
-            <h1 class="text-4xl font-bold">Welcome to <p>Siem Reap</p>
-            </h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus pariatur beatae in, vitae
-                voluptates
-                doloribus laudantium. Asperiores corrupti nam recusandae modi tenetur eveniet ad. Error, aliquid aperiam
-                ea nulla
-                magni fugit repellendus beatae incidunt ullam neque quam tempora cupiditate numquam rerum. Delectus
-                architecto
-                incidunt magni sequi optio perferendis voluptatibus similique!</p>
-        </div>
-        <div class="w-[50%] h-full flex gap-3">
-            <div class="w-[50%] h-full  gap-3 flex flex-col">
-                <div class="w-full h-[50%]  rounded-[10px]">
-                    <img src="https://placehold.jp/317x252.png" alt="" class="w-full h-full object-cover rounded-[10px]">
-                </div>
-                <div class="w-full h-[50%]  rounded-[10px]">
-                    <img src="https://placehold.jp/317x252.png" alt="" class="w-full h-full object-cover rounded-[10px]">
-                </div>
-            </div>
-            <div class="w-[50%] h-full ">
-                <div class="w-full h-full  rounded-[10px]">
-                    <img src="https://placehold.jp/367x520.png" alt="" class="w-full h-full object-cover rounded-[10px]">
-                </div>
-            </div>
-        </div>
+        <div id="plan" class="w-[50%] h-full "></div>
+        <!-- image -->
+        <div id="description_plan" class="w-[50%] h-full flex gap-3"></div>
     </div>
 
     <div class="w-[90%] m-auto mt-5">
@@ -76,404 +65,27 @@
     <!-- Where to stay -->
     <div class="w-[90%] h-[548px] m-auto mt-14">
         <h1 class="w-full text-black h-[10%] text-3xl font-bold">Where to stay</h1>
-        <div class="w-full h-[90%] flex justify-center items-center gap-10">
-
-            <!-- box 1 -->
-            <div class="w-[305px] h-[460px] bg-white rounded-[10px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                <div class="w-[100%] h-[300px] rounded-t-[10px] flex justify-center items-center">
-                    <div class="w-full h-full rounded-[10px] p-3">
-                        <img src="https://placehold.jp/285x248.png" alt="" class="w-full h-full rounded-[10px]">
-                    </div>
-                </div>
-                <div class="w-[100%] h-[160px] rounded-b-[10px]">
-                    <div class="w-[90%] h-[95%] m-auto ">
-                        <div class="w-[100%] h-[35px] ">
-                            <h3 class="text-[20px] font-bold">Name location</h3>
-                        </div>
-                        <div class="w-full h-[70px] ">
-                            <p class="text-[15px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                                quasi
-                                accusantium hic perspiciatis! Beatae, incidunt.</p>
-                        </div>
-                        <button class="w-[89px] h-[27px] bg-red-600 mt-3"><a href="../View/view.html">View more</a></button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- box 2 -->
-            <div class="w-[305px] h-[460px] bg-white rounded-[10px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                <div class="w-[100%] h-[300px] rounded-t-[10px] flex justify-center items-center">
-                    <div class="w-full h-full rounded-[10px] p-3">
-                        <img src="https://placehold.jp/285x248.png" alt="" class="w-full h-full rounded-[10px]">
-                    </div>
-                </div>
-                <div class="w-[100%] h-[160px] rounded-b-[10px]">
-                    <div class="w-[90%] h-[95%] m-auto ">
-                        <div class="w-[100%] h-[35px] ">
-                            <h3 class="text-[20px] font-bold">Name location</h3>
-                        </div>
-                        <div class="w-full h-[70px] ">
-                            <p class="text-[15px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                                quasi
-                                accusantium hic perspiciatis! Beatae, incidunt.</p>
-                        </div>
-                        <button class="w-[89px] h-[27px] bg-red-600 mt-3">View more</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- box 3 -->
-            <div class="w-[305px] h-[460px] bg-white rounded-[10px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                <div class="w-[100%] h-[300px] rounded-t-[10px] flex justify-center items-center">
-                    <div class="w-full h-full rounded-[10px] p-3">
-                        <img src="https://placehold.jp/285x248.png" alt="" class="w-full h-full rounded-[10px]">
-                    </div>
-                </div>
-                <div class="w-[100%] h-[160px] rounded-b-[10px]">
-                    <div class="w-[90%] h-[95%] m-auto ">
-                        <div class="w-[100%] h-[35px] ">
-                            <h3 class="text-[20px] font-bold">Name location</h3>
-                        </div>
-                        <div class="w-full h-[70px] ">
-                            <p class="text-[15px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                                quasi
-                                accusantium hic perspiciatis! Beatae, incidunt.</p>
-                        </div>
-                        <button class="w-[89px] h-[27px] bg-red-600 mt-3">View more</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- box 4 -->
-            <div class="w-[305px] h-[460px] bg-white rounded-[10px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                <div class="w-[100%] h-[300px] rounded-t-[10px] flex justify-center items-center">
-                    <div class="w-full h-full rounded-[10px] p-3">
-                        <img src="https://placehold.jp/285x248.png" alt="" class="w-full h-full rounded-[10px]">
-                    </div>
-                </div>
-                <div class="w-[100%] h-[160px] rounded-b-[10px]">
-                    <div class="w-[90%] h-[95%] m-auto ">
-                        <div class="w-[100%] h-[35px] ">
-                            <h3 class="text-[20px] font-bold">Name location</h3>
-                        </div>
-                        <div class="w-full h-[70px] ">
-                            <p class="text-[15px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                                quasi
-                                accusantium hic perspiciatis! Beatae, incidunt.</p>
-                        </div>
-                        <button class="w-[89px] h-[27px] bg-red-600 mt-3">View more</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id="StayTripPlan" class="w-full h-[90%] flex justify-center items-center gap-10"></div>
     </div>
 
     <!-- Where to eat -->
     <div class="w-[90%] h-[548px] m-auto mt-14">
         <h1 class="w-full text-black h-[10%] text-3xl font-bold">Where to eat</h1>
-        <div class="w-full h-[90%] flex justify-center items-center gap-10">
-
-            <!-- box 1 -->
-            <div class="w-[305px] h-[460px] bg-white rounded-[10px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                <div class="w-[100%] h-[300px] rounded-t-[10px] flex justify-center items-center">
-                    <div class="w-full h-full rounded-[10px] p-3">
-                        <img src="https://placehold.jp/285x248.png" alt="" class="w-full h-full rounded-[10px]">
-                    </div>
-                </div>
-                <div class="w-[100%] h-[160px] rounded-b-[10px]">
-                    <div class="w-[90%] h-[95%] m-auto ">
-                        <div class="w-[100%] h-[35px] ">
-                            <h3 class="text-[20px] font-bold">Name location</h3>
-                        </div>
-                        <div class="w-full h-[70px] ">
-                            <p class="text-[15px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                                quasi
-                                accusantium hic perspiciatis! Beatae, incidunt.</p>
-                        </div>
-                        <button class="w-[89px] h-[27px] bg-red-600 mt-3">View more</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- box 2 -->
-            <div class="w-[305px] h-[460px] bg-white rounded-[10px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                <div class="w-[100%] h-[300px] rounded-t-[10px] flex justify-center items-center">
-                    <div class="w-full h-full rounded-[10px] p-3">
-                        <img src="https://placehold.jp/285x248.png" alt="" class="w-full h-full rounded-[10px]">
-                    </div>
-                </div>
-                <div class="w-[100%] h-[160px] rounded-b-[10px]">
-                    <div class="w-[90%] h-[95%] m-auto ">
-                        <div class="w-[100%] h-[35px] ">
-                            <h3 class="text-[20px] font-bold">Name location</h3>
-                        </div>
-                        <div class="w-full h-[70px] ">
-                            <p class="text-[15px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                                quasi
-                                accusantium hic perspiciatis! Beatae, incidunt.</p>
-                        </div>
-                        <button class="w-[89px] h-[27px] bg-red-600 mt-3">View more</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- box 3 -->
-            <div class="w-[305px] h-[460px] bg-white rounded-[10px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                <div class="w-[100%] h-[300px] rounded-t-[10px] flex justify-center items-center">
-                    <div class="w-full h-full rounded-[10px] p-3">
-                        <img src="https://placehold.jp/285x248.png" alt="" class="w-full h-full rounded-[10px]">
-                    </div>
-                </div>
-                <div class="w-[100%] h-[160px] rounded-b-[10px]">
-                    <div class="w-[90%] h-[95%] m-auto ">
-                        <div class="w-[100%] h-[35px] ">
-                            <h3 class="text-[20px] font-bold">Name location</h3>
-                        </div>
-                        <div class="w-full h-[70px] ">
-                            <p class="text-[15px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                                quasi
-                                accusantium hic perspiciatis! Beatae, incidunt.</p>
-                        </div>
-                        <button class="w-[89px] h-[27px] bg-red-600 mt-3">View more</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- box 4 -->
-            <div class="w-[305px] h-[460px] bg-white rounded-[10px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                <div class="w-[100%] h-[300px] rounded-t-[10px] flex justify-center items-center">
-                    <div class="w-full h-full rounded-[10px] p-3">
-                        <img src="https://placehold.jp/285x248.png" alt="" class="w-full h-full rounded-[10px]">
-                    </div>
-                </div>
-                <div class="w-[100%] h-[160px] rounded-b-[10px]">
-                    <div class="w-[90%] h-[95%] m-auto ">
-                        <div class="w-[100%] h-[35px] ">
-                            <h3 class="text-[20px] font-bold">Name location</h3>
-                        </div>
-                        <div class="w-full h-[70px] ">
-                            <p class="text-[15px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                                quasi
-                                accusantium hic perspiciatis! Beatae, incidunt.</p>
-                        </div>
-                        <button class="w-[89px] h-[27px] bg-red-600 mt-3">View more</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id="ToEating" class="w-full h-[90%] flex justify-center items-center gap-10"></div>
     </div>
-
-
+    
     <!-- Thing to do -->
     <div class="w-[90%] h-[548px] m-auto mt-14">
         <h1 class="w-full text-black h-[10%] text-3xl font-bold">Thing to do</h1>
-        <div class="w-full h-[90%] flex justify-center items-center gap-10">
-
-            <!-- box 1 -->
-            <div class="w-[305px] h-[460px] bg-white rounded-[10px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                <div class="w-[100%] h-[300px] rounded-t-[10px] flex justify-center items-center">
-                    <div class="w-full h-full rounded-[10px] p-3">
-                        <img src="https://placehold.jp/285x248.png" alt="" class="w-full h-full rounded-[10px]">
-                    </div>
-                </div>
-                <div class="w-[100%] h-[160px] rounded-b-[10px]">
-                    <div class="w-[90%] h-[95%] m-auto ">
-                        <div class="w-[100%] h-[35px] ">
-                            <h3 class="text-[20px] font-bold">Name location</h3>
-                        </div>
-                        <div class="w-full h-[70px] ">
-                            <p class="text-[15px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                                quasi
-                                accusantium hic perspiciatis! Beatae, incidunt.</p>
-                        </div>
-                        <button class="w-[89px] h-[27px] bg-red-600 mt-3">View more</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- box 2 -->
-            <div class="w-[305px] h-[460px] bg-white rounded-[10px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                <div class="w-[100%] h-[300px] rounded-t-[10px] flex justify-center items-center">
-                    <div class="w-full h-full rounded-[10px] p-3">
-                        <img src="https://placehold.jp/285x248.png" alt="" class="w-full h-full rounded-[10px]">
-                    </div>
-                </div>
-                <div class="w-[100%] h-[160px] rounded-b-[10px]">
-                    <div class="w-[90%] h-[95%] m-auto ">
-                        <div class="w-[100%] h-[35px] ">
-                            <h3 class="text-[20px] font-bold">Name location</h3>
-                        </div>
-                        <div class="w-full h-[70px] ">
-                            <p class="text-[15px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                                quasi
-                                accusantium hic perspiciatis! Beatae, incidunt.</p>
-                        </div>
-                        <button class="w-[89px] h-[27px] bg-red-600 mt-3">View more</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- box 3 -->
-            <div class="w-[305px] h-[460px] bg-white rounded-[10px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                <div class="w-[100%] h-[300px] rounded-t-[10px] flex justify-center items-center">
-                    <div class="w-full h-full rounded-[10px] p-3">
-                        <img src="https://placehold.jp/285x248.png" alt="" class="w-full h-full rounded-[10px]">
-                    </div>
-                </div>
-                <div class="w-[100%] h-[160px] rounded-b-[10px]">
-                    <div class="w-[90%] h-[95%] m-auto ">
-                        <div class="w-[100%] h-[35px] ">
-                            <h3 class="text-[20px] font-bold">Name location</h3>
-                        </div>
-                        <div class="w-full h-[70px] ">
-                            <p class="text-[15px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                                quasi
-                                accusantium hic perspiciatis! Beatae, incidunt.</p>
-                        </div>
-                        <button class="w-[89px] h-[27px] bg-red-600 mt-3">View more</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- box 4 -->
-            <div class="w-[305px] h-[460px] bg-white rounded-[10px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                <div class="w-[100%] h-[300px] rounded-t-[10px] flex justify-center items-center">
-                    <div class="w-full h-full rounded-[10px] p-3">
-                        <img src="https://placehold.jp/285x248.png" alt="" class="w-full h-full rounded-[10px]">
-                    </div>
-                </div>
-                <div class="w-[100%] h-[160px] rounded-b-[10px]">
-                    <div class="w-[90%] h-[95%] m-auto ">
-                        <div class="w-[100%] h-[35px] ">
-                            <h3 class="text-[20px] font-bold">Name location</h3>
-                        </div>
-                        <div class="w-full h-[70px] ">
-                            <p class="text-[15px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                                quasi
-                                accusantium hic perspiciatis! Beatae, incidunt.</p>
-                        </div>
-                        <button class="w-[89px] h-[27px] bg-red-600 mt-3">View more</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id="ThingToDoTripPlan" class="w-full h-[90%] flex justify-center items-center gap-10"></div>
     </div>
 
     <!-- Destination -->
     <div class="w-[90%] h-[548px] m-auto mt-14">
         <h1 class="w-full text-black h-[10%] text-3xl font-bold">Destination</h1>
-        <div class="w-full h-[90%] flex justify-center items-center gap-10">
-
-            <!-- box 1 -->
-            <div class="w-[305px] h-[460px] bg-white rounded-[10px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                <div class="w-[100%] h-[300px] rounded-t-[10px] flex justify-center items-center">
-                    <div class="w-full h-full rounded-[10px] p-3">
-                        <img src="https://placehold.jp/285x248.png" alt="" class="w-full h-full rounded-[10px]">
-                    </div>
-                </div>
-                <div class="w-[100%] h-[160px] rounded-b-[10px]">
-                    <div class="w-[90%] h-[95%] m-auto ">
-                        <div class="w-[100%] h-[35px] ">
-                            <h3 class="text-[20px] font-bold">Name location</h3>
-                        </div>
-                        <div class="w-full h-[70px] ">
-                            <p class="text-[15px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                                quasi
-                                accusantium hic perspiciatis! Beatae, incidunt.</p>
-                        </div>
-                        <button class="w-[89px] h-[27px] bg-red-600 mt-3">View more</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- box 2 -->
-            <div class="w-[305px] h-[460px] bg-white rounded-[10px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                <div class="w-[100%] h-[300px] rounded-t-[10px] flex justify-center items-center">
-                    <div class="w-full h-full rounded-[10px] p-3">
-                        <img src="https://placehold.jp/285x248.png" alt="" class="w-full h-full rounded-[10px]">
-                    </div>
-                </div>
-                <div class="w-[100%] h-[160px] rounded-b-[10px]">
-                    <div class="w-[90%] h-[95%] m-auto ">
-                        <div class="w-[100%] h-[35px] ">
-                            <h3 class="text-[20px] font-bold">Name location</h3>
-                        </div>
-                        <div class="w-full h-[70px] ">
-                            <p class="text-[15px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                                quasi
-                                accusantium hic perspiciatis! Beatae, incidunt.</p>
-                        </div>
-                        <button class="w-[89px] h-[27px] bg-red-600 mt-3">View more</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- box 3 -->
-            <div class="w-[305px] h-[460px] bg-white rounded-[10px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                <div class="w-[100%] h-[300px] rounded-t-[10px] flex justify-center items-center">
-                    <div class="w-full h-full rounded-[10px] p-3">
-                        <img src="https://placehold.jp/285x248.png" alt="" class="w-full h-full rounded-[10px]">
-                    </div>
-                </div>
-                <div class="w-[100%] h-[160px] rounded-b-[10px]">
-                    <div class="w-[90%] h-[95%] m-auto ">
-                        <div class="w-[100%] h-[35px] ">
-                            <h3 class="text-[20px] font-bold">Name location</h3>
-                        </div>
-                        <div class="w-full h-[70px] ">
-                            <p class="text-[15px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                                quasi
-                                accusantium hic perspiciatis! Beatae, incidunt.</p>
-                        </div>
-                        <button class="w-[89px] h-[27px] bg-red-600 mt-3">View more</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- box 4 -->
-            <div class="w-[305px] h-[460px] bg-white rounded-[10px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                <div class="w-[100%] h-[300px] rounded-t-[10px] flex justify-center items-center">
-                    <div class="w-full h-full rounded-[10px] p-3">
-                        <img src="https://placehold.jp/285x248.png" alt="" class="w-full h-full rounded-[10px]">
-                    </div>
-                </div>
-                <div class="w-[100%] h-[160px] rounded-b-[10px]">
-                    <div class="w-[90%] h-[95%] m-auto ">
-                        <div class="w-[100%] h-[35px] ">
-                            <h3 class="text-[20px] font-bold">Name location</h3>
-                        </div>
-                        <div class="w-full h-[70px] ">
-                            <p class="text-[15px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                                quasi
-                                accusantium hic perspiciatis! Beatae, incidunt.</p>
-                        </div>
-                        <button class="w-[89px] h-[27px] bg-red-600 mt-3">View more</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id="Destination" class="w-full h-[90%] flex justify-center items-center gap-10"> </div>
     </div>
-
-    <!-- Location -->
-    <div class="w-[90%] m-auto mt-14 p-4 space-y-4">
-        <h1 class="text-3xl font-bold text-black">Location</h1>
-
-        <div class="flex items-center rounded b-orange-400 p-">
-            <i class="text-lg text-black fa-solid fa-location-dot"></i>
-            <h3 class="text-black ms-2">Siem Reap, Cambodia</h3>
-        </div>
-
-        <div class="flex-1 ">
-            <div class="w-full h-[500px] ">
-                <iframe class="object-cover w-full h-full rounded-[10px]"
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1991562.9708896878!2d104.63834878032793!3d12.858034547092315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2skh!4v1747901816677!5m2!1sen!2skh"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </div>
-
-
+    
     <!-- footer -->
     <div class="w-full h-[537px] bg-[#090021] mt-12">
         <div class="w-[90%] h-full m-auto flex ">
@@ -526,7 +138,7 @@
         </div>
     </div>
 
-    <script src="../js/index.js"></script>
+    <script type="module" src="../js/index.js"></script>
 </body>
 
 </html>
