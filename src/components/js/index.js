@@ -21,6 +21,44 @@ import {
   getWhereToStaySeaPage,
 } from './connect.js';
 // ==================== Component: Card Template ====================
+
+// card firs page
+function createCardFirs(dest) {
+  const card = document.createElement("div");
+  card.className = "w-[305px] h-[360px] bg-white rounded-[16px] shadow-md hover:shadow-lg transition-shadow overflow-hidden flex flex-col";
+
+  card.innerHTML = `
+    <div class="w-full h-[200px] overflow-hidden">
+      <img src="${dest.image}" alt="${dest.title}" class="w-full h-full object-cover rounded-t-[16px]">
+    </div>
+    <div class="p-3 flex-1">
+      <h2 class="text-lg font-bold">${dest.title}</h2>
+      <p class="text-sm mt-2 line-clamp-3">${dest.description}</p>
+    </div>
+    <div class="px-3 pb-3 mb-5 ms-2">
+      <a href="../View/view.html">
+        <button class="w-[89px] h-[35px] bg-red-600 text-white text-sm font-semibold rounded hover:bg-red-700 transition cursor-pointer">
+          View more
+        </button>
+      </a>
+    </div>
+  `;
+  return card;
+}
+
+function renderCardsFirs(data, containerId) {
+  const container = document.getElementById(containerId);
+  if (!container || !Array.isArray(data)) return;
+  
+  container.innerHTML = ""; // clear previous content
+  data.forEach(item => {
+    const card = createCardFirs(item);
+    container.appendChild(card);
+  });
+}
+
+
+// Next Page
 function createCard(dest) {
   const card = document.createElement("div");
   card.className = "w-[305px] h-[360px] bg-white rounded-[16px] shadow-md hover:shadow-lg transition-shadow overflow-hidden flex flex-col";
@@ -135,9 +173,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Page introll dastion
     const homeData = await getHomePage();
     renderImageGrid(homeData.topDestinations, "home_Destinations");
-    renderCards(homeData.Destinations, "descriptionPage");
-    renderCards(homeData.Eating, "Eat_homepage");
-    renderCards(homeData.Stay, "Stay_Trip");
+    renderCardsFirs(homeData.Destinations, "descriptionPage");
+    renderCardsFirs(homeData.Eating, "Eat_homepage");
+    renderCardsFirs(homeData.Stay, "Stay_Trip");
     renderImageGrid(homeData.LocationTopTrip, "locationTrip");
 
     const descData = await getDescriptionPage();
@@ -180,66 +218,105 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const HistoryTraveler = await getTravelerHistoryPage();
     renderCards(HistoryTraveler?.HistoryTopDestination, "HistoryTopDestination");
-    renderCards(HistoryTraveler?.HistorytWhereToEat , "HistoryEating");
-    renderCards(HistoryTraveler?.HistoryWhereToStay , "HistoryStay");
+    renderCards(HistoryTraveler?.HistorytWhereToEat, "HistoryEating");
+    renderCards(HistoryTraveler?.HistoryWhereToStay, "HistoryStay");
 
     const HistoryDes = await getDesianationHistoryPage();
     renderCards(HistoryDes?.HistoryTopDestinations, "desHistory");
     renderCards(HistoryDes?.HistoryAllDestinations?.RowHistory1, "rowHistory1");
     renderCards(HistoryDes?.HistoryAllDestinations?.RowHistory2, "rowHistory2");
-    
+
     const HistoryEating = await getEatingHistoryPage();
     renderCards(HistoryEating?.HistoryTopWhereToEat, "HistoryEating");
     renderCards(HistoryEating?.HistoryAllWhereToEat?.RowHistory1, "historyrow1");
     renderCards(HistoryEating?.HistoryAllWhereToEat?.RowHistory1, "historyrow2");
-    
+
     const History_Stay_Page = await getStayHistoryPage();
     renderCards(History_Stay_Page?.HistoryTopWhereToStayPage, "History_Stay");
     renderCards(History_Stay_Page?.HistoryAllWhereToStayPage?.Row_Stay1, "history_row_Stay1");
     renderCards(History_Stay_Page?.HistoryAllWhereToStayPage?.Row_Stay1, "history_row_Stay2");
-    
+
     const MountainTravelerPage = await getTravelerMountainPage();
     renderCards(MountainTravelerPage?.SeaNewTourPackages, "MountionPackagesNew");
-    renderCards(MountainTravelerPage?.SeaPopularTourPackages , "MountionPackagesPopular");
-    renderCards(MountainTravelerPage?.SeaAllTourPackages , "MountionPackagesAll");
-    
+    renderCards(MountainTravelerPage?.SeaPopularTourPackages, "MountionPackagesPopular");
+    renderCards(MountainTravelerPage?.SeaAllTourPackages, "MountionPackagesAll");
+
     const MountainDes = await getDestinationMountainPage();
     renderCards(MountainDes?.MountainToDestinations, "MountainTopDestinations");
     renderCards(MountainDes?.MountainAllDestinations?.MountainRow1, "MountainRow1");
     renderCards(MountainDes?.MountainAllDestinations?.MountainRow2, "MountainRow2");
-    
+
     const MountainEating = await getEatingMountainPage();
     renderCards(MountainEating?.MountainTopWhereToEat, "eatMountion");
     renderCards(MountainEating?.MountainAllWhereToEat?.Eat_mountion_row1, "Eat_mountion_row1");
     renderCards(MountainEating?.MountainAllWhereToEat?.Eat_mountion_row2, "Eat_mountion_row2");
-    
+
     const MountainStay = await getStayMountainPage();
     renderCards(MountainStay?.MountainTopWhereToStay, "Mountion_Stay");
     renderCards(MountainStay?.MountainAllWhereToStay?.Mountion_Stay_row1, "Mountion_Stay_row1");
     renderCards(MountainStay?.MountainAllWhereToStay?.Mountion_Stay_row2, "Mountion_Stay_row2");
-    
+
     const CounntryTraveler = await getCountryTravelerPage();
     renderCards(CounntryTraveler?.Country_New, "Country_New");
-    renderCards(CounntryTraveler?.Country_Popular , "Country_Popular");
-    renderCards(CounntryTraveler?.Country_All , "Country_All");
-    
+    renderCards(CounntryTraveler?.Country_Popular, "Country_Popular");
+    renderCards(CounntryTraveler?.Country_All, "Country_All");
+
     const CountryDes = await getCountryDestinationPage();
     renderCards(CountryDes?.Country_Side_Top_Destinations, "desCountry");
     renderCards(CountryDes?.Country_Side_All_Destinations?.RowDesCountry1, "row_Des_country1");
     renderCards(CountryDes?.Country_Side_All_Destinations?.RowDesCountry2, "row_Des_country2");
-    
-    const CountryEating = await getCountryEatingPage() ;
+
+    const CountryEating = await getCountryEatingPage();
     renderCards(CountryEating?.Country_Side_Top_Destinations_Eat, "CountryEating");
     renderCards(CountryEating?.Country_Side_All_Destinations_Eat?.Row_Eat_Country1, "country_eat_row1");
     renderCards(CountryEating?.Country_Side_All_Destinations_Eat?.Row_Eat_Country2, "country_eat_row2");
-    
-    const CountryStay = await getCountryStayPage() ;
+
+    const CountryStay = await getCountryStayPage();
     renderCards(CountryStay?.Country_Side_Top_Destinations_Stay, "Country_Stay");
     renderCards(CountryStay?.Country_Side_All_Destinations_Stay?.Row_Stay_Country1, "country_row_Stay1");
     renderCards(CountryStay?.Country_Side_All_Destinations_Stay?.Row_Stay_Country2, "country_row_Stay2");
-    
+
   } catch (err) {
     console.error("Data loading error:", err);
   }
 
 });
+
+//  Auto typed on slide
+// const text = "សូមស្វាគមន៍មកកាន់ដំណើរកំសាន្តក្នុងប្រទេសកម្ពុជា";
+// const typingText = document.getElementById("typingText");
+// let index = 0;
+
+// function typeCharacter() {
+//   if (index < text.length) {
+//     typingText.textContent += text.charAt(index);
+//     index++;
+//     setTimeout(typeCharacter, 100);
+//   }
+// }
+
+// window.addEventListener("load", typeCharacter);
+
+const text = "សូមស្វាគមន៍មកកាន់ដំណើរកំសាន្តក្នុងប្រទេសកម្ពុជា";
+const typingText = document.getElementById("typingText");
+let index = 0;
+
+function typeCharacter() {
+  if (!typingText) return; // safety check
+
+  if (index < text.length) {
+    typingText.textContent += text.charAt(index);
+    index++;
+    setTimeout(typeCharacter, 100);
+  } else {
+    // After finishing typing, wait a bit then restart
+    setTimeout(() => {
+      typingText.textContent = "";  // clear text
+      index = 0;                    // reset index
+      typeCharacter();              // start typing again
+    }, 1500); // wait 1.5 seconds before restarting
+  }
+}
+
+window.addEventListener("load", typeCharacter);
+

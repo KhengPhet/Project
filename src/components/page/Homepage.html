@@ -2,36 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="../output.css">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../output.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Fasthand&family=Hanuman:wght@100..900&family=Libre+Barcode+39&family=Moul&display=swap" rel="stylesheet">
 
-<style> 
-    body{
-       font-family: "Hanuman", serif;
-       font-weight:500;
-        font-style: normal; 
-    }
-</style>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Fasthand&family=Hanuman:wght@100..900&family=Libre+Barcode+39&family=Moul&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../Style.css">
 </head>
 
-<body>
-    <!-- header -->
-    <div class="container">
-        <div class="bg-pink-300 w-[90%] h-[70px] m-auto flex">
-            <div class="logo  w-[236px] h-[100%] flex justify-center items-center ms-[50px]">
-                <div class="imags_logo w-[100%] h-[50%]  flex justify-center items-center">
-                    <img src="https://placehold.jp/235x57.png" alt="image">
+<body class="container">
+    <!-- Header -->
+    <div style="z-index: 1000 ; top: 0 ; position: sticky"
+        class="container mb-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white">
+        <div class="w-full h-[70px] m-auto flex">
+            <div class="logo w-[236px] h-full flex justify-center items-center ms-[12]">
+                <div class="images_logo w-full h-[50%] flex justify-center items-center">
+                    <img src="../images/LOGO.jpg" alt="Logo" class="object-contain h-full" />
                 </div>
             </div>
-            <nav class="nav  w-[50%] h-[100%] flex justify-center items-center">
+
+            <nav class="nav  w-[50%] h-[100%] flex justify-center items-center ">
                 <ul class="flex items-center justify-center gap-10 font-bold uppercase">
                     <li><a href="./Homepage.html" class="transition hover:text-blue-500">Home</a></li>
                     <li><a href="./Destination.html" class="transition hover:text-blue-500 ">Destination</a></li>
@@ -42,114 +43,98 @@
         </div>
     </div>
 
-    <!-- Slide  3 or 4 slide-->
-    <div class="container w-[90%] h-[600px] m-auto mt-10 bg-orange-500 rounded-[10px] relative overflow-hidden">
-        <img id="slide" src="" alt="Slide"
-            class="w-full h-full object-cover rounded-[10px] opacity-0 transition-opacity duration-700">
-    </div>
+    <!-- Hero Slide -->
+    <section class=" hero-slide">
+        <img src="../images/trip.jpg" alt="Trip Image" />
+        <div class="overlay"></div>
+        <h1 id="typingText" class="typing-text "></h1>
+    </section>
 
-    <!-- Our Destination Type -->
-    <div class="container w-[90%] h-[200px] bg-white m-auto mt-3 shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.1)]">
-        <h1 class="w-full text-center text-black h-[20%] text-3xl font-bold ">Our Destination Type</h1>
+    <!-- Destination Types -->
+    <section class="w-[90%] h-[200px] bg-white mx-auto mt-2 shadow-md m-auto">
+        <h1 class="text-center text-black h-[20%] text-3xl font-bold">Our Destination Type</h1>
         <div class="w-full h-[80%] flex justify-center items-center gap-5">
-            <!-- Sea -->
-            <div
-                class="w-[142px] h-[142px]  bg-white rounded-[10px] flex justify-center items-center shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.1)]">
-                <div class="w-[70%] h-[70%]">
-                    <a href="./Sea/Destination.html">
-                        <div class="w-[75%] h-[75%] center flex justify-center items-center rounded-[50px] m-auto">
-                            <img src="../images/sea.png" alt="image" class="w-full h-full object-cover rounded-[50px]">
-                        </div>
-                        <h2 class="text-center">Sea</h2>
-                    </a>
-                </div>
-            </div>
-            <!-- History -->
-            <div
-                class="w-[142px] h-[142px]  bg-white rounded-[10px] flex justify-center items-center shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.1)]">
-                <div class="w-[70%] h-[70%]">
-                    <div class="w-[75%] h-[75%] center flex justify-center items-center rounded-[50px] m-auto">
-                        <a href="./History/Destination.html">
-                            <img src="../images/history.png" alt="image"
-                                class="w-full h-full object-cover rounded-[50px]">
-                        </a>
+            <!-- Destination Item -->
+            <div class="w-[142px] h-[142px] bg-white rounded-[10px] flex justify-center items-center shadow-md">
+                <a href="./Sea/Destination.html" class="w-[70%] h-[70%] text-center">
+                    <div class="w-[75%] h-[75%] rounded-full m-auto overflow-hidden">
+                        <img src="../images/sea.png" alt="Sea" class="object-cover w-full h-full" />
                     </div>
-                    <h2 class="text-center">History</h2>
-                </div>
+                    <h2>Sea</h2>
+                </a>
             </div>
-            <!-- Mountain -->
-            <div
-                class="w-[142px] h-[142px]  bg-white rounded-[10px] flex justify-center items-center shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.1)]">
-                <div class="w-[70%] h-[70%]">
-                    <div class="w-[75%] h-[75%] center flex justify-center items-center rounded-[50px] m-auto">
-                        <a href="./Mountain/Destination.html">
-                            <img src="../images/Mountain.png" alt="image"
-                                class="w-full h-full object-cover rounded-[50px]">
-                        </a>
+            <!-- Repeat for History, Mountain, Country -->
+            <div class="w-[142px] h-[142px] bg-white rounded-[10px] flex justify-center items-center shadow-md">
+                <a href="./History/Destination.html" class="w-[70%] h-[70%] text-center">
+                    <div class="w-[75%] h-[75%] rounded-full m-auto overflow-hidden">
+                        <img src="../images/history.png" alt="History" class="object-cover w-full h-full" />
                     </div>
-                    <h2 class="text-center">Mountain</h2>
-                </div>
+                    <h2>History</h2>
+                </a>
             </div>
-            <!-- Country side -->
-            <div
-                class="w-[142px] h-[142px]  bg-white rounded-[10px] flex justify-center items-center shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.1)]">
-                <div class="w-[70%] h-[70%]">
-                    <div class="w-[75%] h-[75%] center flex justify-center items-center rounded-[50px] m-auto">
-                        <a href="./Country-side/Destination.html">
-                            <img src="../images/Country.png" alt="image"
-                                class="w-full h-full object-cover rounded-[50px]">
-                        </a>
+            <div class="w-[142px] h-[142px] bg-white rounded-[10px] flex justify-center items-center shadow-md">
+                <a href="./Mountain/Destination.html" class="w-[70%] h-[70%] text-center">
+                    <div class="w-[75%] h-[75%] rounded-full m-auto overflow-hidden">
+                        <img src="../images/Mountain.png" alt="Mountain" class="object-cover w-full h-full" />
                     </div>
-                    <h2 class="text-center">Country</h2>
-                </div>
+                    <h2>Mountain</h2>
+                </a>
+            </div>
+            <div class="w-[142px] h-[142px] bg-white rounded-[10px] flex justify-center items-center shadow-md">
+                <a href="./Country-side/Destination.html" class="w-[70%] h-[70%] text-center">
+                    <div class="w-[75%] h-[75%] rounded-full m-auto overflow-hidden">
+                        <img src="../images/Country.png" alt="Country Side" class="object-cover w-full h-full" />
+                    </div>
+                    <h2>Country</h2>
+                </a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Top Destinations -->
-    <div class="w-[90%] h-[500px] mt-5 m-auto mb-5">
-        <h1 class="w-full text-black h-[10%] text-3xl font-bold">Top Destinations</h1>
-        <div class="flex w-full h-full gap-5" id="home_Destinations"></div>
-    </div>
+    <!-- Main Sections -->
+    <main class="w-[90%] m-auto space-y-14 mt-5">
+        <section>
+            <h1 class="mt-10 text-3xl font-bold text-black">Top Destinations</h1>
+            <div class="flex gap-5 mt-2" id="home_Destinations"></div>
+        </section>
 
-    <!-- Destination -->
-    <div class="w-[90%] h-[310px] m-auto mt-14">
-        <h1 class="w-full text-black h-[10%] text-3xl font-bold">Destinations</h1>
-        <div id="descriptionPage" class="w-full h-[90%] flex justify-center items-center gap-10 mt-10"></div>
-    </div>
+        <section>
+            <h1 class="mt-10 text-3xl font-bold text-black">Destinations</h1>
+            <div id="descriptionPage" class="flex items-center justify-center gap-10 mt-5"></div>
+        </section>
 
-    <!-- Eat​ -->
-    <div class="w-[90%] h-[310px] m-auto mt-14">
-        <h1 class="w-full text-black h-[10%] text-3xl font-bold">Eat</h1>
-        <div id="Eat_homepage" class="w-full h-[90%] flex justify-center items-center gap-10 mt-10">
-        </div>
-    </div>
+        <section>
+            <h1 class="mt-10 text-3xl font-bold text-black">Eat</h1>
+            <div id="Eat_homepage" class="flex items-center justify-center gap-10 mt-5"></div>
+        </section>
 
-    <!-- Stay -->
-    <div class="w-[90%] h-[310px] m-auto mt-14">
-        <h1 class="w-full text-black h-[10%] text-3xl font-bold">Stay</h1>
-        <div id="Stay_Trip" class="w-full h-[90%] flex justify-center items-center gap-10 mt-10"></div>
-    </div>
+        <section>
+            <h1 class="mt-10 text-3xl font-bold text-black">Stay</h1>
+            <div id="Stay_Trip" class="flex items-center justify-center gap-10 mt-5"></div>
+        </section>
 
-    <!-- Top Destinations -->
-    <div class="w-[90%] h-[500px] mt-5 m-auto mb-4">
-        <h1 class="w-full text-black h-[10%] text-3xl font-bold">Top Destinations</h1>
-        <div class="flex w-full h-full gap-5" id="locationTrip"></div>
-    </div>
+        <section class="mb-4">
+            <h1 class="mt-10 text-3xl font-bold text-black">Top Destinations</h1>
+            <div class="flex gap-5 mt-2" id="locationTrip"></div>
+        </section>
+    </main>
 
     <!-- footer -->
     <div class="w-full h-[537px] bg-[#090021] mt-12">
         <div class="w-[90%] h-full m-auto flex ">
             <div class="w-[33.3%] h-full p-5">
                 <!-- logo footer -->
-                <div class="w-full h-[10%] mt-5">
-                    <img src="" alt="image">
+                <div class="w-full h-[10%] mt-5 flex justify-center items-center">
+                    <img src="../images/LOGO.jpg" alt="Logo" class="object-contain h-full" />
                 </div>
-                <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, eos vitae cumque
+
+                <p class="mt-5 text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, eos vitae
+                    cumque
                     sequi necessitatibus deleniti
                     nisi ducimus veniam non, ut odio. Ex quod, fugit debitis rerum animi consectetur exercitationem
                     mollitia,
-                    praesentium voluptatem illum id optio! Officia quidem cum eligendi doloribus impedit nobis voluptas
+                    praesentium voluptatem illum id optio! Officia quidem cum eligendi doloribus impedit nobis
+                    voluptas
                     optio,
                     nihil similique ducimus, nemo, quibusdam eius.</p>
             </div>
@@ -188,6 +173,8 @@
         </div>
     </div>
 
+    <!-- Scripts -->
     <script type="module" src="../js/index.js"></script>
 </body>
+
 </html>
